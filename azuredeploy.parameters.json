@@ -39,13 +39,13 @@
             "value": "10.0.0.64/27"
         },
         "_artifactsLocation": {
-            "value": "https://raw.githubusercontent.com/christofvg/AzurePfSense/master/linked/"
+            "value": "https://raw.githubusercontent.com/basawaqe/azspfsense/linked/"
         },
         "managedDiskStorageType": {
             "value": "Standard_LRS"
         },
         "sourceVhdPath": {
-            "value": "/vhd/pfsense.vhd"
+            "value": "/pfsensevhd/pfsense.vhd"
         },
         "osType": {
             "value": "Linux"
