@@ -1,0 +1,75 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualNetworkResourceGroup": {
+            "value": "eu-vdc-vnet"
+        },
+        "pfSenseResourceGroup": {
+            "value": "eu-firewalls-rg"
+        },
+        "managementVmResourceGroup": {
+            "value": "eu-firewall-management-rg"
+        },
+        "location": {
+            "value": "hua2"
+        },
+        "vNetName": {
+            "value": "eu-vdc-vnet"
+        },
+        "vNetAddressPrefix": {
+            "value": "10.0.0.0/24"
+        },
+        "gatewaySubnetName": {
+            "value": "gatewaysubnet"
+        },
+        "gatewaySubnetAddressPrefix": {
+            "value": "10.0.0.0/27"
+        },
+        "frontEndSubnetName": {
+            "value": "frontend"
+        },
+        "frontEndSubnetAddressPrefix": {
+            "value": "10.0.0.32/27"
+        },
+        "backEndSubnetName": {
+            "value": "backend"
+        },
+        "backEndSubnetAddressPrefix": {
+            "value": "10.0.0.64/27"
+        },
+        "_artifactsLocation": {
+            "value": "https://raw.githubusercontent.com/christofvg/AzurePfSense/master/linked/"
+        },
+        "managedDiskStorageType": {
+            "value": "Standard_LRS"
+        },
+        "sourceVhdPath": {
+            "value": "/vhd/pfsense.vhd"
+        },
+        "osType": {
+            "value": "Linux"
+        },
+        "managedDiskName": {
+            "value": "eu-pfsense-1-os"
+        },
+        "frontEndNicName": {
+            "value": "eu-pfsense-1-frontend-nic"
+        },
+        "backEndNicName": {
+            "value": "eu-pfsense-1-backend-nic"
+        },
+        "frontEndIp": {
+            "value": "10.0.0.36"
+        },
+        "backEndIp": {
+            "value": "10.0.0.68"
+        },
+        "vmName": {
+            "value": "eu-pfsense-1"
+        },
+        "vmSize": {
+            "value": "Standard_B2s"
+        }
+    }
+}
