@@ -76,7 +76,7 @@
             "metadata": {
                 "description": "Path to the repository where the linked templates can be found"
             },
-            "defaultValue": "https://raw.githubusercontent.com/christofvg/AzurePfSense/master/linked/"
+            "defaultValue": "https://raw.githubusercontent.com/basawaqe/azspfsense/linked/"
         },
         "managedDiskStorageType": {
             "type": "string",
@@ -88,7 +88,7 @@
         "sourceVhdPath": {
             "type": "string",
             "metadata": {
-                "description": "Path to the vhd file on the storage account (e.g. /vhd/pfsense.vhd)"
+                "description": "Path to the vhd file on the storage account (e.g. /pfsensevhd/pfsense.vhd)"
             }
         },
         "vhdStorageAccountName": {
@@ -176,14 +176,14 @@
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2018-11-01",
+            "apiVersion": "2018-09-01",
             "location": "[parameters('location')]",
             "name": "[parameters('virtualNetworkResourceGroup')]",
             "properties": {}
         },
         {
             "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2018-11-01",
+            "apiVersion": "2018-09-01",
             "location": "[parameters('location')]",
             "name": "[parameters('pfSenseResourceGroup')]",
             "properties": {}
@@ -194,7 +194,7 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Resources/resourceGroups', parameters('virtualNetworkResourceGroup'))]"
             ],
-            "apiVersion": "2018-11-01",
+            "apiVersion": "2018-09-01",
             "ResourceGroup": "[parameters('virtualNetworkResourceGroup')]",
             "properties": {
                 "mode": "Incremental",
@@ -224,7 +224,7 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Resources/resourceGroups', parameters('pfSenseResourceGroup'))]"
             ],
-            "apiVersion": "2018-11-01",
+            "apiVersion": "2018-09-01",
             "ResourceGroup": "[parameters('pfSenseResourceGroup')]",
             "properties": {
                 "mode": "Incremental",
@@ -261,7 +261,7 @@
                 "[resourceId('Microsoft.Resources/resourceGroups', parameters('pfSenseResourceGroup'))]",
                 "provisionVirtualNetwork"
             ],
-            "apiVersion": "2018-11-01",
+            "apiVersion": "2018-09-01",
             "ResourceGroup": "[parameters('pfSenseResourceGroup')]",
             "properties": {
                 "mode": "Incremental",
