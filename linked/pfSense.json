@@ -51,7 +51,7 @@
             "name": "[parameters('frontEndNicName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('frontEndSubnetName'))]" 
+                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('vnetName'))]" 
             ],            
             "properties": {
                 "ipConfigurations": [
@@ -74,7 +74,7 @@
             "name": "[parameters('backEndNicName')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('backEndSubnetName'))]"
+                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('vnetName'))]"
             ], 
             "properties": {
                 "ipConfigurations": [
