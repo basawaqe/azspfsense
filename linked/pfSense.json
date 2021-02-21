@@ -21,9 +21,6 @@
         "vNetName": {
             "type": "string"
         },
-        "vNetResourceGroupName": {
-            "type": "string"
-        },
         "frontEndSubnetName": {
             "type": "string"
         },

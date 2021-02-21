@@ -76,7 +76,7 @@
             "metadata": {
                 "description": "Path to the repository where the linked templates can be found"
             },
-            "defaultValue": "https://raw.githubusercontent.com/basawaqe/azspfsense/linked/"
+            "defaultValue": "https://raw.githubusercontent.com/basawaqe/azspfsense/master/linked/"
         },
         "managedDiskStorageType": {
             "type": "string",

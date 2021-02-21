@@ -8,9 +8,6 @@
         "pfSenseResourceGroup": {
             "value": "eu-firewalls-rg"
         },
-        "managementVmResourceGroup": {
-            "value": "eu-firewall-management-rg"
-        },
         "location": {
             "value": "hua2"
         },
@@ -39,7 +36,7 @@
             "value": "10.0.0.64/27"
         },
         "_artifactsLocation": {
-            "value": "https://raw.githubusercontent.com/basawaqe/azspfsense/linked/"
+            "value": "https://raw.githubusercontent.com/basawaqe/azspfsense/master/linked/"
         },
         "managedDiskStorageType": {
             "value": "Standard_LRS"
