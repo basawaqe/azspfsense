@@ -41,9 +41,11 @@
         }
     },
     "variables": {
-        "frontEndSubnetRef": "['/subscriptions/c6c9a5b8-cee8-4758-914f-cfec3a03e49d/resourceGroups/pfsense2/Microsoft.Network/virtualNetworks/subnets', parameters('vNetName'), parameters('frontEndSubnetName'))]",
+        "frontEndSubnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('frontEndSubnetName'))]",
         //resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vnetName'), variables('subnetName'))
-        "backEndSubnetRef": "['/subscriptions/c6c9a5b8-cee8-4758-914f-cfec3a03e49d/resourceGroups/pfsense2/Microsoft.Network/virtualNetworks/subnets', parameters('vNetName'), parameters('backEndSubnetName'))]"
+        //"[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('frontEndSubnetName'))]"
+       //"[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('backEndSubnetName'))]"
+        "backEndSubnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('backEndSubnetName'))]"
     },
     "resources": [
         {
