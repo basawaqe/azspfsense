@@ -50,6 +50,9 @@
             "type": "Microsoft.Network/networkInterfaces",
             "name": "[parameters('frontEndNicName')]",
             "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('frontEndSubnetName'))]" 
+            ],            
             "properties": {
                 "ipConfigurations": [
                     {
@@ -70,6 +73,9 @@
             "type": "Microsoft.Network/networkInterfaces",
             "name": "[parameters('backEndNicName')]",
             "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('backEndSubnetName'))]"
+            ], 
             "properties": {
                 "ipConfigurations": [
                     {
