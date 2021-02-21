@@ -42,9 +42,6 @@
     },
     "variables": {
         "frontEndSubnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('frontEndSubnetName'))]",
-        //resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vnetName'), variables('subnetName'))
-        //"[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('frontEndSubnetName'))]"
-       //"[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('backEndSubnetName'))]"
         "backEndSubnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets/', parameters('vnetName'),parameters('backEndSubnetName'))]"
     },
     "resources": [
