@@ -49,10 +49,7 @@
             "apiVersion": "2018-10-01",
             "type": "Microsoft.Network/networkInterfaces",
             "name": "[parameters('frontEndNicName')]",
-            "location": "[parameters('location')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('vnetName'))]" 
-            ],            
+            "location": "[parameters('location')]",           
             "properties": {
                 "ipConfigurations": [
                     {
@@ -73,9 +70,6 @@
             "type": "Microsoft.Network/networkInterfaces",
             "name": "[parameters('backEndNicName')]",
             "location": "[parameters('location')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('vnetName'))]"
-            ], 
             "properties": {
                 "ipConfigurations": [
                     {
