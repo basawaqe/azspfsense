@@ -41,8 +41,8 @@
         }
     },
     "variables": {
-        "frontEndSubnetRef": "[resourceId(parameters('vNetResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('vNetName'), parameters('frontEndSubnetName'))]",
-        "backEndSubnetRef": "[resourceId(parameters('vNetResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('vNetName'), parameters('backEndSubnetName'))]"
+        "frontEndSubnetRef": "[resourceId(resourceGroup()), 'Microsoft.Network/virtualNetworks/subnets', parameters('vNetName'), parameters('frontEndSubnetName'))]",
+        "backEndSubnetRef": "[resourceId(resourceGroup()), 'Microsoft.Network/virtualNetworks/subnets', parameters('vNetName'), parameters('backEndSubnetName'))]"
     },
     "resources": [
         {
