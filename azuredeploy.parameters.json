@@ -60,7 +60,7 @@
             "value": "eu-pfsense-1"
         },
         "vmSize": {
-            "value": "Standard_B2s"
+            "value": "Standard_A2"
         }
     }
 }
