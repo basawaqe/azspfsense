@@ -23,7 +23,7 @@
         }
     },
     "variables": {
-        "sourceVhdUri": "[concat('https://', parameters('storageAccountName'), '.blob.hua2.contosolabs.net', parameters('sourceVhdPath'))]"
+        "sourceVhdUri": "[concat('https://', parameters('storageAccountName'), '.blob.lnv2.azscss.external', parameters('sourceVhdPath'))]"
     },
     "resources": [
         {
